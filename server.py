@@ -15,7 +15,7 @@ class MyTcpHandler(socketserver.BaseRequestHandler):
             try:
                 # self.data = self.request.recv(1024).decode('utf-8')
                 # print('接收到的数据:', self.data)
-                res = open('test.txt').read()
+                res = '565'
 
                 self.request.sendall(res.encode('utf-8'))
             except ConnectionResetError as e:
